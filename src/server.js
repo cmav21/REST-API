@@ -1,4 +1,5 @@
 import express from 'express';
+import router from "./routes/index.routes";
 
 const app = express();
 
@@ -6,6 +7,6 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 
 //Routes
-app.get('/', (req, res) => res.send('Hello world'));
+app.use(router);
 
 export default app; 
