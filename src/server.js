@@ -1,3 +1,6 @@
+// import express, {json} from 'express';
+//Another way to import json
+
 const app = express();
 
 //Routes
@@ -8,7 +11,8 @@ import TaskRoutes from "./routes/task.routes"
 //Settings
 app.set('port', process.env.PORT || 3000);
 
-//Middleware, funciones que se ejecutan antes de ejecutar las rutas
+//Middleware, functions which are executed before access to routes
+app.use(express.json());//This to understand the json format
 
 
 //Routes
